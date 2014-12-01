@@ -1,0 +1,35 @@
+/* Empty. Add your own CSS if you like */
+.gridcell {
+    text-align: center;
+}
+
+.bar-footer {
+    height: auto !important;
+}
+
+.footer {
+    position: absolute;
+    border-top: 1px solid black;
+    background-color: white;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.queueContainer {
+    overflow: hidden;
+    overflow-x: auto;
+    white-space: nowrap;
+    display: block;
+    width: 100%;
+}
+
+.queue {
+    position: relative;
+    display: inline-block;
+}
+
+.queueItem {
+    display: inline-block;
+    margin-left: 4px;
+}
