@@ -1,5 +1,15 @@
-<div class="footer">
-    <div>Now Playing</div><br/>
-    <img ng-src="{{queueSongs[0].coverUrl}}" width="80px" height="80px">
-    <queue info="queueSongs"></queue>
+<div class="footer" data-drop="true" data-jqyoui-options ng-model="queueSongs" jqyoui-droppable="{multiple:true}">
+    <div class="currentSongContainer">
+        <div>Now Playing</div><br/>
+        <img ng-src="{{queueSongs[0].coverUrl}}" width="80px" height="80px">
+    </div>
+    <div class="queueContainer" >
+        <div>Queue</div><br/>
+        <div class="queue">
+            <div ng-repeat="song in queueSongs" class="queueItem" data-drag="false" data-jqyoui-options="{revert: 'invalid'}" ng-model="queueSongs" jqyoui-draggable="{index: {{$index}},animate:true}">
+                <img ng-src="{{song.coverUrl}}" width="80px" height="80px">
+            </div>
+        </div>
+    </div>
+
 </div>

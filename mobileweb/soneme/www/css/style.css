@@ -1,6 +1,34 @@
 /* Empty. Add your own CSS if you like */
+
+body {
+    font-family: 'GenW01Light';
+    font-weight: bold;
+    font-style: normal;
+}
+
+.onTop {
+    z-index: 20;
+}
+
+ion-content {
+
+}
+
+.gridContainer {
+    padding-top: 20px;
+    background-image: url(background-transparent.png);
+    background-size: cover;
+}
+
+.coverContainer {
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
 .gridcell {
     text-align: center;
+    z-index: 20;
 }
 
 .bar-footer {
@@ -8,25 +36,42 @@
 }
 
 .footer {
-    position: absolute;
+    position: fixed;
+    border: 3px solid #457ab1;
     border-top: 1px solid black;
-    background-color: white;
+    color: white;
+    background-color: #457ab1;;
     left: 0;
     right: 0;
     bottom: 0;
 }
 
+.footer.bordered {
+    border: 3px solid red;
+}
+
+.bar.bar-positive {
+    background-color: #457ab1;
+}
+
+.currentSongContainer {
+    float: left;
+    width: 120px; /*Width of left column*/
+}
+
 .queueContainer {
-    overflow: hidden;
-    overflow-x: auto;
-    white-space: nowrap;
+    margin-left: 120px;
+
     display: block;
-    width: 100%;
+    margin-right: 4px;
 }
 
 .queue {
     position: relative;
-    display: inline-block;
+    display: block;
+    overflow: hidden;
+    overflow-x: auto;
+    white-space: nowrap;
 }
 
 .queueItem {
