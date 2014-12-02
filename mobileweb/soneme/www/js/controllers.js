@@ -2,15 +2,15 @@ angular.module('starter.controllers', [])
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout, $state) {
   $scope.gridSongs = [
-    { name: 'Before Stars', artist: 'Artist', coverUrl: 'img/albums/W1 Before The Stars.jpeg' },
-    { name: 'Endlessly', artist: 'Artist', coverUrl: 'img/albums/W1 Endlessly.jpeg' },
-    { name: 'I Can See', artist: 'Artist', coverUrl: 'img/albums/W1 I Can See.jpeg' },
-    { name: 'Josephine', artist: 'Artist', coverUrl: 'img/albums/W1 Josephine.jpeg' },
-    { name: 'Krazy Koz', artist: 'Artist', coverUrl: 'img/albums/W1 Krazy Koz.jpeg' },
-    { name: 'Lucia', artist: 'Artist', coverUrl: 'img/albums/W1 Lucia.jpeg' },
-    { name: 'Women At Well', artist: 'Artist', coverUrl: 'img/albums/W1 Women At The Well.jpeg' },
-    { name: 'Red Eyes', artist: 'Artist', coverUrl: 'img/albums/W1C1 Red Eyes.jpeg' },
-    { name: 'The Faker', artist: 'Artist', coverUrl: 'img/albums/W1C2 The Faker.jpg' }
+    { name: 'Before The Stars', artist: 'Is/Is', coverUrl: 'img/albums/W1 Before The Stars.jpeg' },
+    { name: 'Endlessly', artist: 'TOY', coverUrl: 'img/albums/W1 Endlessly.jpeg' },
+    { name: 'I Can See', artist: 'Moon Duo', coverUrl: 'img/albums/W1 I Can See.jpeg' },
+    { name: 'Josephine', artist: 'Magnolia Electric Co', coverUrl: 'img/albums/W1 Josephine.jpeg' },
+    { name: 'Krazy Koz', artist: 'Mojave 3', coverUrl: 'img/albums/W1 Krazy Koz.jpeg' },
+    { name: 'Lucia', artist: 'Hiss Golden Messenger', coverUrl: 'img/albums/W1 Lucia.jpeg' },
+    { name: 'Women At The Well', artist: 'Israel Nash', coverUrl: 'img/albums/W1 Women At The Well.jpeg' },
+    { name: 'Red Eyes', artist: 'The War on Drugs', coverUrl: 'img/albums/W1C1 Red Eyes.jpeg' },
+    { name: 'The Faker', artist: 'Ty Segall', coverUrl: 'img/albums/W1C2 The Faker.jpg' }
   ];
 
   $scope.nowPlaying = { name: 'Red Eyes', artist: 'Artist', coverUrl: 'img/albums/W1C1 Red Eyes.jpeg' };
