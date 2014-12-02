@@ -47,6 +47,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.directives',
         }
       }
     })
+    .state('app.artistInfo', {
+      url: "/artistInfo/:gridId",
+      views: {
+        'menuContent' :{
+            templateUrl: "templates/artistInfo.html",
+          }
+      }
+    })
+
     .state('app.djs', {
       url: "/djs",
       views: {

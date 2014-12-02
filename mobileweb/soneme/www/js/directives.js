@@ -14,7 +14,8 @@ angular.module('starter.directives', [])
         return {
             restrict: 'E',
             scope: {
-                queueSongs: '=info'
+                queueSongs: '=info',
+                nowPlaying: '=now'
             },
             templateUrl: 'directives/player.html'
         };

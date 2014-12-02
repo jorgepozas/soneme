@@ -1,8 +1,8 @@
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
+.controller('AppCtrl', function($scope, $ionicModal, $timeout, $state) {
   $scope.gridSongs = [
-    { name: 'Before The Stars', artist: 'Artist', coverUrl: 'img/albums/W1 Before The Stars.jpeg' },
+    { name: 'Before Stars', artist: 'Artist', coverUrl: 'img/albums/W1 Before The Stars.jpeg' },
     { name: 'Endlessly', artist: 'Artist', coverUrl: 'img/albums/W1 Endlessly.jpeg' },
     { name: 'I Can See', artist: 'Artist', coverUrl: 'img/albums/W1 I Can See.jpeg' },
     { name: 'Josephine', artist: 'Artist', coverUrl: 'img/albums/W1 Josephine.jpeg' },
@@ -13,18 +13,28 @@ angular.module('starter.controllers', [])
     { name: 'The Faker', artist: 'Artist', coverUrl: 'img/albums/W1C2 The Faker.jpg' }
   ];
 
+  $scope.nowPlaying = { name: 'Red Eyes', artist: 'Artist', coverUrl: 'img/albums/W1C1 Red Eyes.jpeg' };
+
   $scope.queueSongs = [
-    { name: 'Red Eyes', artist: 'Artist', coverUrl: 'img/albums/W1C1 Red Eyes.jpeg' }
+      { name: 'I Can See', artist: 'Artist', coverUrl: 'img/albums/W1 I Can See.jpeg' },
   ];
+
+  $scope.artistInfo = [];
 
   $scope.dragStartCallback = function(event, ui) {
     jQuery("ion-content").addClass("onTop");
-    jQuery(".footer").addClass("bordered");
+    jQuery(".footer").addClass("dropZone");
+    jQuery(".artistInfoDropZone").addClass("dropZone");
   };
 
   $scope.dragStopCallback = function(event, ui) {
     jQuery("ion-content").removeClass("onTop");
-    jQuery(".footer").removeClass("bordered");
+    jQuery(".footer").removeClass("dropZone");
+    jQuery(".artistInfoDropZone").removeClass("dropZone");
+  };
+
+  $scope.dropInArtistInfoCallback = function(event, ui) {
+      $state.go('app.artistInfo');
   };
 
 })

@@ -1,0 +1,14 @@
+<ion-view title="Artist Info">
+  <ion-content class="has-header">
+    <div class="infoHeader">
+        <img class="infoCover" ng-src="{{artistInfo[0].coverUrl}}">
+        <h2>{{artistInfo[0].name}}</h2>
+        <hr/>
+        <h3>{{artistInfo[0].artist}}</h3>
+    </div>
+    <div class="infoDescription">
+        Technically, the Piano Guys are the music duo of pianist Jon Schmidt and cellist Steven Sharp Nelson, but the Piano Guys are also a 21st century multimedia collective that includes Paul Anderson, studio engineer and writer Al van der Beek, and videographer Tel Stewart, and together they produce musical and video gems that mash up classical themes with pop songs that have made the group's YouTube channel one of the most visited on the planet. The group had its beginnings in St. George, Utah, where Anderson owned a piano shop. Schmidt walked in one day and asked if he could practice on one of the pianos for an upcoming concert. Soon Anderson and Schmidt were recording and making videos together, and with the addition of Nelson, posting them to YouTube. Things continued to grow and expand creatively with van der Beek and Stewart aboard, and the collective's productions became joyous, thoughtful, and beautiful interactive musical videos that received millions of YouTube hits and brought the Piano Guys worldwide attention. A debut album, The Piano Guys Hits, Vol. 1, appeared in December of 2011, followed by a holiday album, Family Christmas, in 2013. Wonders arrived a year later in 2014. ~ Steve Leggett, Rovi
+    </div>
+  </ion-content>
+  <player info="queueSongs" now="nowPlaying"></player>
+</ion-view>
