@@ -39,15 +39,24 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('DJsCtrl', function($scope) {
+.controller('DJsCtrl', function($scope, $stateParams) {
   $scope.djs = [
-    { id:1, title: 'Fear One', id: 1, img: 'img/albums/W2 Words.jpeg' },
-    { id:2, title: 'DJ Pozas', id: 2, img: 'img/albums/W1 Endlessly.jpeg' },
-    { id:3, title: 'DJ Away', id: 3, img: 'img/albums/W1 Endlessly.jpeg' },
-    { id:4, title: 'Tara L', id: 4, img: 'img/albums/W1 Endlessly.jpeg' },
-    { id:5, title: 'Crazy Player', id: 5, img: 'img/albums/W1 Endlessly.jpeg' },
-    { id:6, title: 'Master Lucius', id: 6, img: 'img/albums/W1 Endlessly.jpeg' }
+    { id:1, title: 'Fear One', img: 'img/djs/dj1.jpg' },
+    { id:2, title: 'Mike T', img: 'img/djs/dj2.jpg' },
+    { id:3, title: 'Terra Nash', img: 'img/djs/dj3.jpg' },
+    { id:4, title: 'DJ Get Up', img: 'img/djs/dj4.jpg' },
+    { id:5, title: 'Earl Ross', img: 'img/djs/dj5.gif' },
+    { id:6, title: 'DJ Sonora', img: 'img/djs/dj6.jpg' },
+    { id:7, title: 'Wendell Maas', img: 'img/djs/dj7.gif' },
+    { id:8, title: 'DJ Jenna', img: 'img/djs/dj8.jpg' },
+    { id:9, title: 'Cabwaylingo', img: 'img/djs/dj9.jpg' }
   ];
+
+
+  if($stateParams.djId){
+    $scope.currentDJ = $scope.djs[$stateParams.djId - 1];
+  }
+
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {

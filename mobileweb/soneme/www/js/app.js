@@ -71,7 +71,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.directives',
       views: {
         'menuContent' :{
           templateUrl: "templates/dj.html",
-          controller: 'PlaylistCtrl'
+          controller: 'DJsCtrl'
         }
       }
     });

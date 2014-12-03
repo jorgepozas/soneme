@@ -66,6 +66,8 @@ ion-content {
     left: 0;
     right: 0;
     bottom: 0;
+    padding-left: 10px;
+    padding-top: 3px;
 }
 
 .bar.bar-positive {
