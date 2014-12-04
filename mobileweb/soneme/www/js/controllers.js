@@ -218,15 +218,15 @@ angular.module('starter.controllers', [])
 
 .controller('DJsCtrl', function($scope, $stateParams) {
   $scope.djs = [
-    { id:1, title: 'Fear One', img: 'img/djs/dj1.jpg', wheel:'img/wheels/Wheel 1.png', listeners: 5, views: 658 },
-    { id:2, title: 'Mike T', img: 'img/djs/dj2.jpg', wheel:'img/wheels/Wheel 2.png', listeners: 15, views: 45 },
-    { id:3, title: 'Terra Nash', img: 'img/djs/dj3.jpg', wheel:'img/wheels/Wheel 3.png', listeners: 22, views: 430 },
-    { id:4, title: 'DJ Get Up', img: 'img/djs/dj4.jpg', wheel:'img/wheels/Wheel 4.png', listeners: 3, views: 12 },
-    { id:5, title: 'Earl Ross', img: 'img/djs/dj5.gif', wheel:'img/wheels/Wheel 1.png', listeners: 17, views: 112 },
-    { id:6, title: 'DJ Sonora', img: 'img/djs/dj6.jpg', wheel:'img/wheels/Wheel 2.png', listeners: 8, views: 1323 },
-    { id:7, title: 'Wendell Maas', img: 'img/djs/dj7.gif', wheel:'img/wheels/Wheel 3.png', listeners: 2, views: 35 },
-    { id:8, title: 'DJ Jenna', img: 'img/djs/dj8.jpg', wheel:'img/wheels/Wheel 4.png', listeners: 11, views: 198 },
-    { id:9, title: 'Cabwaylingo', img: 'img/djs/dj9.jpg', wheel:'img/wheels/Wheel 1.png', listeners: 21, views: 200 }
+    { id:1, title: 'Fear One', img: 'img/djs/dj1.jpg', wheel:'img/wheels/Wheel 1.png', listeners: 5, views: 658, subtitle: "that's hecka sweet"},
+    { id:2, title: 'Mike T', img: 'img/djs/dj2.jpg', wheel:'img/wheels/Wheel 2.png', listeners: 15, views: 45, subtitle: "the sounds of California"},
+    { id:3, title: 'Terra Nash', img: 'img/djs/dj3.jpg', wheel:'img/wheels/Wheel 3.png', listeners: 22, views: 430, subtitle: "jump around"},
+    { id:4, title: 'DJ Get Up', img: 'img/djs/dj4.jpg', wheel:'img/wheels/Wheel 4.png', listeners: 3, views: 12, subtitle: "music/peace/love"},
+    { id:5, title: 'Earl Ross', img: 'img/djs/dj5.gif', wheel:'img/wheels/Wheel 1.png', listeners: 17, views: 112, subtitle: "punk's not dead"},
+    { id:6, title: 'DJ Sonora', img: 'img/djs/dj6.jpg', wheel:'img/wheels/Wheel 2.png', listeners: 8, views: 1323, subtitle: "songs in the desert"},
+    { id:7, title: 'Wendell Maas', img: 'img/djs/dj7.gif', wheel:'img/wheels/Wheel 3.png', listeners: 2, views: 35, subtitle: "W.A.S.T.E. postal service songs"},
+    { id:8, title: 'DJ Jenna', img: 'img/djs/dj8.jpg', wheel:'img/wheels/Wheel 4.png', listeners: 11, views: 198, subtitle: "songs for good times"},
+    { id:9, title: 'Cabwaylingo', img: 'img/djs/dj9.jpg', wheel:'img/wheels/Wheel 1.png', listeners: 21, views: 200, subtitle: "Jason Molina's my hero"}
   ];
 
 
