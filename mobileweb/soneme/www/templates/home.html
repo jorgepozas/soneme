@@ -7,14 +7,15 @@
   </ion-nav-buttons>
   <ion-content class="has-header">
       <div class="gridContainer">
-          <div class="artistInfoDropZone" data-drop="true" data-jqyoui-options ng-model="artistInfo" jqyoui-droppable="{onDrop:'dropInArtistInfoCallback()'}"></div>
           <div ng-repeat="gridSong in gridSongs" ng-class="{'coverContainer center': gridSong.center, 'coverContainer': !gridSong.center}"
                data-drop="{{gridSong.center}}" ng-model="songInCenter" jqyoui-droppable="{onDrop:'dropInCenterCallback()'}">
-              <div class="gridcell" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="gridSongs"
-                   jqyoui-draggable="{index: {{$index}},placeholder:'keep',animate:true, onStart:'dragStartCallback()', onStop:'dragStopCallback()'}">
-                  <img ng-src="{{gridSong.coverUrl}}">
-                  <p>{{gridSong.name}}</p>
-              </div>
+              <a href="#/app/artistInfo/{{gridSong.id}}">
+                  <div class="gridcell" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="gridSongs"
+                       jqyoui-draggable="{index: {{$index}},placeholder:'keep',animate:true, onStart:'dragStartCallback()', onStop:'dragStopCallback()'}">
+                      <img ng-src="{{gridSong.coverUrl}}">
+                      <p>{{gridSong.name}}</p>
+                  </div>
+              </a>
           </div>
       </div>
   </ion-content>

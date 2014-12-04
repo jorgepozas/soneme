@@ -25,6 +25,7 @@ ion-content {
 }
 
 .gridContainer {
+    padding-top: 20px;
     background-image: url(background-transparent.png);
     background-size: cover;
 }
@@ -56,6 +57,7 @@ ion-content {
     border: 1px solid #B2CAE4;
     background-color: white;
     text-align: center;
+    text-decoration:none;
     z-index: 20;
     padding: 2px;
 }
@@ -68,6 +70,12 @@ ion-content {
     margin: 0 0 4px;
     line-height: 10px;
     font-size: 12px;
+    text-decoration:none;
+}
+
+a {
+    text-decoration: none !important;
+    color: black;
 }
 
 .bar-footer {

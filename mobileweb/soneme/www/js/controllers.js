@@ -1,16 +1,16 @@
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout, $state) {
+.controller('AppCtrl', function($scope, $ionicModal, $timeout, $state, $stateParams) {
   $scope.gridSongs = [
-    { name: 'Before The Stars', artist: 'Is/Is', coverUrl: 'img/albums/W1 Before The Stars.jpeg' },
-    { name: 'Endlessly', artist: 'TOY', coverUrl: 'img/albums/W1 Endlessly.jpeg' },
-    { name: 'I Can See', artist: 'Moon Duo', coverUrl: 'img/albums/W1 I Can See.jpeg' },
-    { name: 'Josephine', artist: 'Magnolia Electric Co', coverUrl: 'img/albums/W1 Josephine.jpeg' },
-    { name: 'The Faker', artist: 'Ty Segall', coverUrl: 'img/albums/W1C2 The Faker.jpg', center: true },
-    { name: 'Krazy Koz', artist: 'Mojave 3', coverUrl: 'img/albums/W1 Krazy Koz.jpeg' },
-    { name: 'Lucia', artist: 'Hiss Golden Messenger', coverUrl: 'img/albums/W1 Lucia.jpeg' },
-    { name: 'Women At Well', artist: 'Israel Nash', coverUrl: 'img/albums/W1 Women At The Well.jpeg' },
-    { name: 'Red Eyes', artist: 'The War on Drugs', coverUrl: 'img/albums/W1C1 Red Eyes.jpeg' }
+    { id:1, name: 'Before The Stars', artist: 'Is/Is', coverUrl: 'img/albums/W1 Before The Stars.jpeg' },
+    { id:2, name: 'Endlessly', artist: 'TOY', coverUrl: 'img/albums/W1 Endlessly.jpeg' },
+    { id:3, name: 'I Can See', artist: 'Moon Duo', coverUrl: 'img/albums/W1 I Can See.jpeg' },
+    { id:4, name: 'Josephine', artist: 'Magnolia Electric Co', coverUrl: 'img/albums/W1 Josephine.jpeg' },
+    { id:5, name: 'The Faker', artist: 'Ty Segall', coverUrl: 'img/albums/W1C2 The Faker.jpg', center: true },
+    { id:6, name: 'Krazy Koz', artist: 'Mojave 3', coverUrl: 'img/albums/W1 Krazy Koz.jpeg' },
+    { id:7, name: 'Lucia', artist: 'Hiss Golden Messenger', coverUrl: 'img/albums/W1 Lucia.jpeg' },
+    { id:8, name: 'Women At Well', artist: 'Israel Nash', coverUrl: 'img/albums/W1 Women At The Well.jpeg' },
+    { id:9, name: 'Red Eyes', artist: 'The War on Drugs', coverUrl: 'img/albums/W1C1 Red Eyes.jpeg' }
   ];
 
     $scope.futureSongs = [
@@ -41,13 +41,16 @@ angular.module('starter.controllers', [])
         { name: 'Red Eyes', artist: 'The War on Drugs', coverUrl: 'img/albums/W1C1 Red Eyes.jpeg' }
     ];
 
-  $scope.nowPlaying = { name: 'Red Eyes', artist: 'Artist', coverUrl: 'img/albums/W1C1 Red Eyes.jpeg' };
+  $scope.nowPlaying = { name: 'Red Eyes', artist: 'The War on Drugs', coverUrl: 'img/albums/W1C1 Red Eyes.jpeg' };
 
   $scope.queueSongs = [
-      { name: 'I Can See', artist: 'Artist', coverUrl: 'img/albums/W1 I Can See.jpeg' },
+      { name: 'I Can See', artist: 'Moon Duo', coverUrl: 'img/albums/W1 I Can See.jpeg' },
   ];
 
-  $scope.artistInfo = [];
+  if($stateParams.gridId){
+    $scope.artistInfo = $scope.gridSongs[$stateParams.gridId - 1];
+  }
+
   $scope.songInCenter = [];
 
   $scope.dragStartCallback = function(event, ui) {
@@ -83,6 +86,11 @@ angular.module('starter.controllers', [])
     $scope.gridSongs[6] = $scope.futureSongs[5];
     $scope.gridSongs[7] = $scope.futureSongs[6];
     $scope.gridSongs[8] = $scope.futureSongs[7];
+
+    var i;
+    for (i = 0; i < 9; i++){
+        $scope.gridSongs[i].id = i+1;
+    }
 
     $scope.futureSongs.splice(0, 8);
 

@@ -53,6 +53,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.directives',
       views: {
         'menuContent' :{
             templateUrl: "templates/artistInfo.html",
+            controller: 'AppCtrl'
           }
       }
     })
