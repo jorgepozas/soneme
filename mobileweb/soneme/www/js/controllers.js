@@ -20,7 +20,7 @@ angular.module('starter.controllers', [])
         { name: 'My Secret To Keep', artist: "The She's", time: '4:01', coverUrl: 'img/albums/W2 My Secret To Keep.jpeg' },
         { name: 'Pure Terror', artist: 'Jack Name', time: '3:20', coverUrl: 'img/albums/W2 Pure Terror.jpeg'},
         { name: 'Rip Van Winkle', artist: 'Shannon and the Clams', time: '2:12', coverUrl: 'img/albums/W2 Rip Van Winkle.jpeg' },
-        { name: 'Words', artist: 'Goat', time: '3:06, coverUrl: 'img/albums/W2 Words.jpeg' },
+        { name: 'Words', artist: 'Goat', time: '3:06', coverUrl: 'img/albums/W2 Words.jpeg' },
         { name: 'I Was Not There', artist: 'Terry Malts', time: '2:41', coverUrl: 'img/albums/W2C3 I Was Not There.jpeg' },
         { name: 'Cherry Street', artist: 'Tijuana Panthers', time: '3:07', coverUrl: 'img/albums/W3 Cherry Street.jpeg' },
         { name: 'I Got The Moves', artist: 'Habibi', time: '1:45', coverUrl: 'img/albums/W3 I Got The Moves.jpeg' },
