@@ -3,16 +3,17 @@
         <div>Now Playing</div><br/>
         <img ng-src="{{nowPlaying.coverUrl}}" width="80px" height="80px">
     </div>
-    <div class="playerInfoContainer" >
-        <div>{{nowPlaying.name}}</div>
-        <div>{{nowPlaying.artist}}</div>
-        <div class="queue">
-            <div ng-repeat="song in queueSongs" class="queueItem" data-drag="false" data-jqyoui-options="{revert: 'invalid'}" ng-model="queueSongs" jqyoui-draggable="{index: {{$index}},animate:true}">
-                <img ng-src="{{song.coverUrl}}" width="80px" height="80px">
-            </div>
+    <div class="playerInfoContainer" ng-hide="showQueue">
+        <img src="img/sliderLeft.jpg" height="130px" ng-click="showQueue=true" class="playerSlider">
+        <div class="songInfo">
+            <div>{{nowPlaying.name}}</div>
+            <div class="italic">{{nowPlaying.artist}}</div>
+            <div>{{nowPlaying.time}}</div>
+            <progress max="100" value="50"> </progress>
         </div>
     </div>
-    <div class="queueContainer" >
+    <div class="queueContainer" ng-hide="!showQueue">
+        <img src="img/sliderRight.jpg" height="130px" ng-click="showQueue=false" class="playerSlider">
         <div>Queue</div><br/>
         <div class="queue">
             <div ng-repeat="song in queueSongs" class="queueItem" data-drag="false" data-jqyoui-options="{revert: 'invalid'}" ng-model="queueSongs" jqyoui-draggable="{index: {{$index}},animate:true}">

@@ -51,7 +51,8 @@ angular.module('starter.controllers', [])
     $scope.artistInfo = $scope.gridSongs[$stateParams.gridId - 1];
   }
 
-  $scope.songInCenter = [];
+  $scope.songInCenter = []
+  $scope.showQueue = false;
 
   $scope.dragStartCallback = function(event, ui) {
     jQuery("ion-content").addClass("onTop");

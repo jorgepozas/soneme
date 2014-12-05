@@ -10,6 +10,10 @@ body {
     z-index: 20;
 }
 
+.italic {
+    font-style: italic;
+}
+
 ion-content {
 
 }
@@ -84,9 +88,10 @@ a {
 
 .footer {
     position: fixed;
-    border: 3px solid #457ab1;
-    color: white;
-    background-color: #457ab1;;
+    border: 3px solid #d8e5f1;
+    border-top: 1px solid #87898b;
+    color: #37608c;
+    background-color: #d8e5f1;;
     left: 0;
     right: 0;
     bottom: 0;
@@ -103,7 +108,25 @@ a {
     width: 120px; /*Width of left column*/
 }
 
-.queueContainer {
+.playerInfoContainer .playerSlider {
+    float: left;
+}
+
+.queueContainer .playerSlider {
+    float: right;
+}
+
+.playerInfoContainer .songInfo {
+    padding-top: 30px;
+    text-align: center;
+    color: black;
+}
+
+progress {
+    background-color: white;
+}
+
+.queueContainer, .playerInfoContainer {
     margin-left: 120px;
 
     display: block;
