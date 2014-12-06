@@ -14,7 +14,7 @@ angular.module('starter.controllers', [])
   ];
 
     $scope.futureSongs = [
-        { name: 'Contraption/Soul Desert', artist: 'Thee Oh Sees', time: '5:21', coverUrl: 'img/albums/W2 Contraption_Soul Desert.jpg' },
+        { name: 'Contraption', artist: 'Thee Oh Sees', time: '5:21', coverUrl: 'img/albums/W2 Contraption_Soul Desert.jpg' },
         { name: 'Flying Golem', artist: 'Wand', time: '3:20', coverUrl: 'img/albums/W2 Flying Golem.jpeg' },
         { name: 'I Am Astronaut', artist: "Bushman's Revenge", time: '3:54', coverUrl: 'img/albums/W2 I Am An Astronaut.jpeg' },
         { name: 'My Secret To Keep', artist: "The She's", time: '4:01', coverUrl: 'img/albums/W2 My Secret To Keep.jpeg' },
@@ -25,7 +25,7 @@ angular.module('starter.controllers', [])
         { name: 'Cherry Street', artist: 'Tijuana Panthers', time: '3:07', coverUrl: 'img/albums/W3 Cherry Street.jpeg' },
         { name: 'I Got The Moves', artist: 'Habibi', time: '1:45', coverUrl: 'img/albums/W3 I Got The Moves.jpeg' },
         { name: 'Like Like', artist: 'The Intelligence', time: '1:49', coverUrl: 'img/albums/W3 Like Like Like Like Like Like Like.jpeg' },
-        { name: 'No Time For The Blues', artist: 'OBN IIIs', time: '3:44', coverUrl: 'img/albums/W3 No Time For The Blues.jpg' },
+        { name: 'No Time Blues', artist: 'OBN IIIs', time: '3:44', coverUrl: 'img/albums/W3 No Time For The Blues.jpg' },
         { name: 'Nowhere To Go', artist: 'Tony Molina', time: '0:48', coverUrl: 'img/albums/W3 Nowhere To Go.jpg'},
         { name: 'Someone For You', artist: 'Warm Soda', time: '2:18', coverUrl: 'img/albums/W3 Someone For You.jpeg' },
         { name: 'Sure As Spring', artist: 'La Luz', time: '2:23', coverUrl: 'img/albums/W3 Sure As Spring.jpeg' },
@@ -37,14 +37,14 @@ angular.module('starter.controllers', [])
         { name: 'The Faker', artist: 'Ty Segall', time: '4:07', coverUrl: 'img/albums/W1C2 The Faker.jpg'},
         { name: 'Krazy Koz', artist: 'Mojave 3', time: '4:01', coverUrl: 'img/albums/W1 Krazy Koz.jpeg' },
         { name: 'Lucia', artist: 'Hiss Golden Messenger', time: '3:11', coverUrl: 'img/albums/W1 Lucia.jpeg' },
-        { name: 'Women At The Well', artist: 'Israel Nash', time: '4:35', coverUrl: 'img/albums/W1 Women At The Well.jpeg' },
+        { name: 'Women At Well', artist: 'Israel Nash', time: '4:35', coverUrl: 'img/albums/W1 Women At The Well.jpeg' },
         { name: 'Red Eyes', artist: 'The War on Drugs', time: '4:59', coverUrl: 'img/albums/W1C1 Red Eyes.jpeg' }
     ];
 
-  $scope.nowPlaying = { name: 'Red Eyes', artist: 'The War on Drugs', coverUrl: 'img/albums/W1C1 Red Eyes.jpeg' };
+  $scope.nowPlaying = { name: 'Red Eyes', artist: 'The War on Drugs', time: '4:59', coverUrl: 'img/albums/W1C1 Red Eyes.jpeg' };
 
   $scope.queueSongs = [
-      { name: 'I Can See', artist: 'Moon Duo', coverUrl: 'img/albums/W1 I Can See.jpeg' },
+      { name: 'I Can See', artist: 'Moon Duo', time: '4:45', coverUrl: 'img/albums/W1 I Can See.jpeg' },
   ];
 
   if($stateParams.gridId){
@@ -53,6 +53,18 @@ angular.module('starter.controllers', [])
 
   $scope.songInCenter = []
   $scope.showQueue = false;
+
+  if(!$scope.isSongPlaying){
+    $scope.isSongPlaying = true;
+
+    setInterval(function ()
+        {
+            var time = $scope.nowPlaying.timeLeft || $scope.nowPlaying.time;
+            if(time > 0){
+                $scope.nowPlaying.timeLeft = time - 1;
+            }
+        }, 1000);
+  }
 
   $scope.dragStartCallback = function(event, ui) {
     jQuery("ion-content").addClass("onTop");

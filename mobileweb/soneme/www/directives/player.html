@@ -8,8 +8,10 @@
         <div class="songInfo">
             <div>{{nowPlaying.name}}</div>
             <div class="italic">{{nowPlaying.artist}}</div>
-            <div>{{nowPlaying.time}}</div>
-            <progress max="100" value="50"> </progress>
+            <div>
+                <div>{{nowPlaying.timeLeft}}</div>
+                <progress max="100" value="50"> </progress>
+            </div>
         </div>
     </div>
     <div class="queueContainer" ng-hide="!showQueue">
